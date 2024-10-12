@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List - Sinks R Us</title>
+    <link href="employee_list.css" rel="stylesheet"> <!-- Link to employee list-specific CSS -->
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold mb-6">Employee List</h1>
+        <table class="min-w-full bg-white">
+            <thead>
+                <tr>
+                    <th class="py-2">Name</th>
+                    <th class="py-2">Job Title</th>
+                    <th class="py-2">Department</th>
+                    <th class="py-2">Email</th>
+                    <th class="py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-100">
+                    <td class="py-2 px-4">Ivan Petrov</td>
+                    <td class="py-2 px-4">Software Engineer</td>
+                    <td class="py-2 px-4">IT</td>
+                    <td class="py-2 px-4">ivan.petrov@sinksrus.com</td>
+                    <td class="py-2 px-4">
+                        <button class="btn-primary" onclick="openModal('Ivan Petrov')">View Info</button>
+                    </td>
+                </tr>
+                <!-- Add other employee rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for employee details -->
+    <div id="employee-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="employee-name" class="modal-title">Employee Info</h2>
+            <p><strong>Job Title:</strong> <span id="employee-job-title"></span></p>
+            <p><strong>Department:</strong> <span id="employee-department"></span></p>
+            <p><strong>Email:</strong> <span id="employee-email"></span></p>
+            <p><strong>Contact No:</strong> <span id="employee-contact"></span></p>
+            <p><strong>Address:</strong> <span id="employee-address"></span></p>
+            <p><strong>Sex:</strong> <span id="employee-sex"></span></p>
+            <p><strong>Marital Status:</strong> <span id="employee-status"></span></p>
+            <button class="btn-danger" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="employee_list.js"></script> <!-- Link to employee list-specific JS -->
+</body>
+</html>
